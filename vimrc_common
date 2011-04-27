@@ -1,0 +1,55 @@
+filetype off
+
+"Pathogen needs to be loaded before any other plugins and settings
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
+set nocompatible
+
+filetype plugin indent on
+
+colorscheme sonofobsidian
+syntax on
+set showmode
+set showcmd
+set number
+
+
+let mapleader=","
+nmap <Leader>d :NERDTreeToggle<CR>
+
+"backup file settings
+set backup
+set backupdir=~/vimfiles/backup
+set directory=~/vimfiles/tmp
+
+"Auto-indent
+nmap <C,S,I> gg=G<CR>
+
+set diffexpr=MyDiff()
+
+
+function MyDiff()
+  let opt = '-a --binary '
+  if &diffopt =~ 'icase' | let opt = opt . '-i ' | endif
+  if &diffopt =~ 'iwhite' | let opt = opt . '-b ' | endif
+  let arg1 = v:fname_in
+  if arg1 =~ ' ' | let arg1 = '"' . arg1 . '"' | endif
+  let arg2 = v:fname_new
+  if arg2 =~ ' ' | let arg2 = '"' . arg2 . '"' | endif
+  let arg3 = v:fname_out
+  if arg3 =~ ' ' | let arg3 = '"' . arg3 . '"' | endif
+  let eq = ''
+  if $VIMRUNTIME =~ ' '
+    if &sh =~ '\<cmd'
+      let cmd = '""' . $VIMRUNTIME . '\diff"'
+      let eq = '"'
+    else
+      let cmd = substitute($VIMRUNTIME, ' ', '" ', '') . '\diff"'
+    endif
+  else
+    let cmd = $VIMRUNTIME . '\diff'
+  endif
+  silent execute '!' . cmd . ' ' . opt . arg1 . ' ' . arg2 . ' > ' . arg3 . eq
+endfunction
+

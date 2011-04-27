@@ -1,0 +1,6 @@
+*~
+*/backup/*
+*.suo
+**/bin/**/*
+**/obj/**/*
+**/_ReSharper.*
