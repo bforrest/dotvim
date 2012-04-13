@@ -2,10 +2,6 @@
 	path = bundle/fugitive
 	url = https://github.com/tpope/vim-fugitive.git
 	ignore = dirty
-[submodule "bundle/gitv"]
-	path = bundle/gitv
-	ignore = dirty
-	url = https://github.com/gregsexton/gitv.git
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
@@ -13,12 +9,4 @@
 [submodule "bundle/unimpaired"]
 	path = bundle/unimpaired
 	url = https://github.com/tpope/vim-unimpaired.git
-[submodule "bundle/surround"]
-	path = bundle/surround
-	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/git"]
-	path = bundle/git
-	url = https://github.com/tpope/vim-surround.git
-[submodule "bundle/vim-git"]
-	path = bundle/vim-git
 	url = https://github.com/tpope/vim-git.git
