@@ -2,6 +2,7 @@ filetype off
 
 "Pathogen needs to be loaded before any other plugins and settings
 call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 call pathogen#helptags()
 
 set nocompatible
