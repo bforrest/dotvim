@@ -16,3 +16,12 @@
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+[submodule "bundle/rails"]
+	path = bundle/rails
+	url = https://github.com/tpope/vim-rails.git
+[submodule "bundle/rake"]
+	path = bundle/rake
+	url = https://github.com/tpope/vim-rake.git
+[submodule "bunlde/snipmate"]
+	path = bunlde/snipmate
+	url = https://github.com/garbas/vim-snipmate.git
