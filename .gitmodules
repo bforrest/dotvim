@@ -25,3 +25,6 @@
 [submodule "bunlde/snipmate"]
 	path = bunlde/snipmate
 	url = https://github.com/garbas/vim-snipmate.git
+[submodule "bundle/tcomment"]
+	path = bundle/tcomment
+	url = https://github.com/jmartindf/vim-tcomment.git
