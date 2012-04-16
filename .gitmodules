@@ -28,3 +28,6 @@
 [submodule "bundle/tcomment"]
 	path = bundle/tcomment
 	url = https://github.com/jmartindf/vim-tcomment.git
+[submodule "bundle/ragtag"]
+	path = bundle/ragtag
+	url = https://github.com/jmartindf/vim-tcomment.git
